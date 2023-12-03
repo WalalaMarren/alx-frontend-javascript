@@ -1,4 +1,4 @@
-class HolbertonCourse{
+export class HolbertonCourse{
     constructor(name, length, students){
         this._name = typeof name === 'string' ? name : 'Default Name';
         this._length = typeof length === 'number' ? length : 0;
@@ -27,7 +27,7 @@ class HolbertonCourse{
     get students(){
         return this._students;
     }
-    set students(newStudent){
+    set students(newStudents){
         if (Array.isArray(newStudents)) {
             this._students = newStudents;
           }else {
