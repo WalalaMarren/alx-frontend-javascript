@@ -8,18 +8,30 @@ export default class HolbertonCourse{
         return this.name;
     }
     set name(newName){
-        this._name = newName;
+        if (typeof newName === 'string'){
+            this._name = newName;
+        }else{
+            console.log('Name must be a string')
+        }
     }
     get length(){
         return this.length;
     }
     set length(newLength){
-        this._length = newLength;
+        if (typeof newLength === 'number'){
+            this._length = newLength;
+        }else{
+            console.log('Length must be a number')
+        }
     }
     get students(){
         return this.students;
     }
     set students(newStudent){
-        this._students = newStudent;
+        if (Array.isArray(newStudents)) {
+            this._students = newStudents;
+          }else {
+            console.error('Students should be an array');
+          }
     }
 }
